@@ -1,8 +1,8 @@
 //
 //  UIView+Category.h
 //
-//  Created by Eugene on 2017/3/3.
-//  Copyright © 2017年 Eugene. All rights reserved.
+//  Created by Long on 2017/3/3.
+//  Copyright © 2017年 Long. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

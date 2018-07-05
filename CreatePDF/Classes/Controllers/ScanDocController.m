@@ -10,12 +10,15 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Vision/Vision.h>
 #import <CoreMotion/CoreMotion.h>
+#import <YYWebImage/YYWebImage.h>
+#import <MBProgressHUD.h>
 
 #import "UIView+Category.h"
 #import "CVPixelBufferUtils.h"
 
 #import "AVCamPreviewView.h"
 #import "DQClipImageController.h"
+#import "DQDocPreviewController.h"
 
 @interface ScanDocController ()
 <AVCaptureVideoDataOutputSampleBufferDelegate>
@@ -75,23 +78,23 @@
     [self.view addSubview:_topActionBtnView];
     
     _btnCancel = [self
-                  buttonWithTitle:nil
-                  icon:@"icon_close_white"
+                  buttonWithTitle:@"取消"
+                  icon:nil
                   sel:@selector(onCancelClick)
                   frame:CGRectMake(0, _topActionBtnView.bottom - 44 , 58, 44)];
     [_topActionBtnView addSubview:_btnCancel];
     
     UIButton *btnFlash = [self
-                          buttonWithTitle:nil
-                          icon:@"icon_flash"
+                          buttonWithTitle:@"闪光灯"
+                          icon:nil
                           sel:@selector(onFlashLightClick)
                           frame:CGRectMake(width - 58, _btnCancel.top, 58, _btnCancel.height)];
     [_topActionBtnView addSubview:btnFlash];
     
     // 相册
     _btnAlbum = [self
-                 buttonWithTitle:nil
-                 icon:@"icon_album_white"
+                 buttonWithTitle:@"相册"
+                 icon:nil
                  sel:@selector(onAlbumClick)
                  frame:CGRectMake(20, self.view.frame.size.height - 88,
                                   40, 40)];
@@ -200,8 +203,8 @@
     DQClipImageController *ctl = [[DQClipImageController alloc] init];
     ctl.image = self.capturedImage;
     ctl.clipRect = rect;
-    ctl.clipFinished = ^(id result1, id result2) {
-        [self doFinishAnimationWithImage:@[result1] isScan:YES];
+    ctl.clipFinished = ^(id result) {
+        [self doFinishAnimationWithImage:@[result] isScan:YES];
     };
     [self.navigationController pushViewController:ctl animated:NO];
 }
@@ -482,15 +485,15 @@
         [self.view bringSubviewToFront:imgView];
         
         [UIView animateWithDuration:0.6 animations:^{
-            imgView.frame = _btnChoosed.frame;
+            imgView.frame = self->_btnChoosed.frame;
         } completion:^(BOOL finished) {
             if (finished) {
-                _btnChoosed.hidden = NO;
-                _lblBadge.hidden = NO;
+                self->_btnChoosed.hidden = NO;
+                self->_lblBadge.hidden = NO;
                 imgView.hidden = YES;
                 [imgView removeFromSuperview];
                 
-                [_btnChoosed setBackgroundImage:image forState:UIControlStateNormal];
+                [self->_btnChoosed setBackgroundImage:image forState:UIControlStateNormal];
                 [self startCapture];
             }
         }];
@@ -500,7 +503,7 @@
 #pragma mark - Button clicks
 // 取消按钮
 - (void)onCancelClick {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self stopCapture];
 }
 
 // 拍照
@@ -540,46 +543,24 @@
 - (void)onAlbumClick {
     [self stopCapture];
     
-    DQPhotoActionSheetManager *manager = [[DQPhotoActionSheetManager alloc] init];
-    [manager dq_showPhotoActionSheetWithController:self
-                                  showPreviewPhoto:NO
-                                    maxSelectCount:100
-                                 didSelectedImages:^(NSArray<UIImage *> *images) {
-                                     [self doFinishAnimationWithImage:images isScan:NO];
-                                 }];
+    
 }
 
 // 预览文档
 - (void)onPreviewPicClick {
-    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [MBProgressHUD showHUDAddedTo:app.window animated:YES];
-    
-    NSString *date = [[NSDate date] mdStringWithFormat:@"MMdd"];
-    NSString *pdfName = [DQRunningUtils dq_displayNameWithLogic:_logicModel pdfName:_pdfName date:date];
-    if (_pdfNumber > 0) {
-        if ([pdfName containsString:@" ∙ "]) {
-            pdfName = [pdfName
-                       stringByReplacingOccurrencesOfString:@" ∙ "
-                       withString:[NSString stringWithFormat:@"%ld ∙ ", _pdfNumber + 1]];
-        } else {
-            pdfName = [pdfName stringByAppendingFormat:@"%ld", _pdfNumber + 1];
-        }
-    }
-    //DQFlowType flow = _logicModel.nodeType;
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     DQDocPreviewController *ctl = [[DQDocPreviewController alloc] init];
     ctl.images = _arrayImages;
-    ctl.displayName = pdfName;
-    ctl.logicModel = _logicModel;
-    // 启租单/停租单/维修完成单/保养完成单/加高完成单只返回本地路径，回到提交页面上传文件
-    BOOL noUpload = YES;//flow == DQFlowTypeRent || flow == DQFlowTypeRemove
-    //    || flow == DQFlowTypeMaintain || flow == DQFlowTypeFix || flow == DQFlowTypeHeighten;
+    ctl.displayName = _pdfName;
+    BOOL noUpload = YES;
     
     ctl.shouldUpload = !noUpload;
     ctl.uploadAction = ^(id result) {
-        if (self.uploadAction) {
-            self.uploadAction(result, pdfName);
+        if (self.finished) {
+            self.finished(result);
         }
     };
+    
     [self.navigationController pushViewController:ctl animated:NO];
 }
 

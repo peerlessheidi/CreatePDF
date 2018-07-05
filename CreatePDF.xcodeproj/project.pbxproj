@@ -23,6 +23,9 @@
 		A679709220EE00D80016087F /* CXCliper.m in Sources */ = {isa = PBXBuildFile; fileRef = A679709120EE00D80016087F /* CXCliper.m */; };
 		A679709520EE01620016087F /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = A679709420EE01620016087F /* UIImage+Color.m */; };
 		A679709920EE04D30016087F /* CVPixelBufferUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A679709820EE04D30016087F /* CVPixelBufferUtils.m */; };
+		A67970FA20EE20B50016087F /* DQDocPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A67970F820EE20B50016087F /* DQDocPreviewController.m */; };
+		A67970FF20EE24EB0016087F /* DQPDFManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A67970FB20EE24EB0016087F /* DQPDFManager.m */; };
+		A679710020EE24EB0016087F /* DQFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A67970FD20EE24EB0016087F /* DQFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,13 @@
 		A679709420EE01620016087F /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
 		A679709720EE04D30016087F /* CVPixelBufferUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVPixelBufferUtils.h; sourceTree = "<group>"; };
 		A679709820EE04D30016087F /* CVPixelBufferUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVPixelBufferUtils.m; sourceTree = "<group>"; };
+		A67970F820EE20B50016087F /* DQDocPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQDocPreviewController.m; sourceTree = "<group>"; };
+		A67970F920EE20B50016087F /* DQDocPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQDocPreviewController.h; sourceTree = "<group>"; };
+		A67970FB20EE24EB0016087F /* DQPDFManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQPDFManager.m; sourceTree = "<group>"; };
+		A67970FC20EE24EB0016087F /* DQPDFManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQPDFManager.h; sourceTree = "<group>"; };
+		A67970FD20EE24EB0016087F /* DQFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQFileManager.m; sourceTree = "<group>"; };
+		A67970FE20EE24EB0016087F /* DQFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQFileManager.h; sourceTree = "<group>"; };
+		A679710120EE26180016087F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,7 @@
 		A679706420EDFC7A0016087F /* CreatePDF */ = {
 			isa = PBXGroup;
 			children = (
+				A679710120EE26180016087F /* PrefixHeader.pch */,
 				A679708A20EE00730016087F /* Classes */,
 				A679706B20EDFC7A0016087F /* Main.storyboard */,
 				A679706E20EDFC850016087F /* Assets.xcassets */,
@@ -151,6 +162,8 @@
 		A679708B20EE00840016087F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A67970F920EE20B50016087F /* DQDocPreviewController.h */,
+				A67970F820EE20B50016087F /* DQDocPreviewController.m */,
 				A679708D20EE00A40016087F /* DQClipImageController.h */,
 				A679708E20EE00A40016087F /* DQClipImageController.m */,
 				A679706820EDFC7A0016087F /* ScanDocController.h */,
@@ -173,6 +186,10 @@
 		A679709620EE04C60016087F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A67970FE20EE24EB0016087F /* DQFileManager.h */,
+				A67970FD20EE24EB0016087F /* DQFileManager.m */,
+				A67970FC20EE24EB0016087F /* DQPDFManager.h */,
+				A67970FB20EE24EB0016087F /* DQPDFManager.m */,
 				A679709720EE04D30016087F /* CVPixelBufferUtils.h */,
 				A679709820EE04D30016087F /* CVPixelBufferUtils.m */,
 			);
@@ -274,12 +291,15 @@
 				A679708F20EE00A40016087F /* DQClipImageController.m in Sources */,
 				A679709920EE04D30016087F /* CVPixelBufferUtils.m in Sources */,
 				A679706A20EDFC7A0016087F /* ScanDocController.m in Sources */,
+				A67970FF20EE24EB0016087F /* DQPDFManager.m in Sources */,
 				A679709220EE00D80016087F /* CXCliper.m in Sources */,
 				A679707520EDFC860016087F /* main.m in Sources */,
+				A679710020EE24EB0016087F /* DQFileManager.m in Sources */,
 				A679708420EDFEFE0016087F /* AVCamPreviewView.m in Sources */,
 				A679709520EE01620016087F /* UIImage+Color.m in Sources */,
 				A679708920EDFFCE0016087F /* UIView+Category.m in Sources */,
 				A679706720EDFC7A0016087F /* AppDelegate.m in Sources */,
+				A67970FA20EE20B50016087F /* DQDocPreviewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92XN22H22Q;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CreatePDF/PrefixHeader.pch";
 				INFOPLIST_FILE = CreatePDF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 92XN22H22Q;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CreatePDF/PrefixHeader.pch";
 				INFOPLIST_FILE = CreatePDF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -6,11 +6,11 @@
 //  Copyright © 2018年 Heidi. All rights reserved.
 //
 
-#ifndef Define_h
-#define Define_h
+#import <UIKit/UIKit.h>
 
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define IS_IPHONEX    (SCREEN_HEIGHT == 812.0)
 
 typedef NS_ENUM(uint8_t, MOVRotateDirection)
 {
@@ -32,4 +32,5 @@ typedef void (^ClipBlock) (UIImage *image);
 // 由弧度转换角度
 #define kRadianToDegrees(radian) (radian * 180.0) / (M_PI)
 
-#endif /* Define_h */
+#define kFOLDERNAME @"PDF"  // 本地缓存目录名
+#define kPDFNAME @"photoToPDF"      // 默认pdf名前缀
