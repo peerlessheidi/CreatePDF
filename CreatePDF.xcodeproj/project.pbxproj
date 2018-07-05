@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A679706720EDFC7A0016087F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A679706620EDFC7A0016087F /* AppDelegate.m */; };
+		A679706A20EDFC7A0016087F /* ScanDocController.m in Sources */ = {isa = PBXBuildFile; fileRef = A679706920EDFC7A0016087F /* ScanDocController.m */; };
+		A679706D20EDFC7A0016087F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A679706B20EDFC7A0016087F /* Main.storyboard */; };
+		A679706F20EDFC850016087F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A679706E20EDFC850016087F /* Assets.xcassets */; };
+		A679707220EDFC850016087F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A679707020EDFC850016087F /* LaunchScreen.storyboard */; };
+		A679707520EDFC860016087F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A679707420EDFC860016087F /* main.m */; };
+		A679707D20EDFE4C0016087F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A679707C20EDFE4C0016087F /* AVFoundation.framework */; };
+		A679707F20EDFE520016087F /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A679707E20EDFE520016087F /* Vision.framework */; };
+		A679708120EDFE600016087F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A679708020EDFE600016087F /* CoreMotion.framework */; };
+		A679708420EDFEFE0016087F /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = A679708320EDFEFE0016087F /* AVCamPreviewView.m */; };
+		A679708920EDFFCE0016087F /* UIView+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = A679708820EDFFCD0016087F /* UIView+Category.m */; };
+		A679708F20EE00A40016087F /* DQClipImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A679708E20EE00A40016087F /* DQClipImageController.m */; };
+		A679709220EE00D80016087F /* CXCliper.m in Sources */ = {isa = PBXBuildFile; fileRef = A679709120EE00D80016087F /* CXCliper.m */; };
+		A679709520EE01620016087F /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = A679709420EE01620016087F /* UIImage+Color.m */; };
+		A679709920EE04D30016087F /* CVPixelBufferUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A679709820EE04D30016087F /* CVPixelBufferUtils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A679706220EDFC7A0016087F /* CreatePDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreatePDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A679706520EDFC7A0016087F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A679706620EDFC7A0016087F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A679706820EDFC7A0016087F /* ScanDocController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanDocController.h; sourceTree = "<group>"; };
+		A679706920EDFC7A0016087F /* ScanDocController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanDocController.m; sourceTree = "<group>"; };
+		A679706C20EDFC7A0016087F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A679706E20EDFC850016087F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A679707120EDFC850016087F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A679707320EDFC860016087F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A679707420EDFC860016087F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A679707C20EDFE4C0016087F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A679707E20EDFE520016087F /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		A679708020EDFE600016087F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		A679708220EDFEF40016087F /* AVCamPreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
+		A679708320EDFEFE0016087F /* AVCamPreviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
+		A679708520EDFF8A0016087F /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		A679708720EDFFCD0016087F /* UIView+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Category.h"; sourceTree = "<group>"; };
+		A679708820EDFFCD0016087F /* UIView+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Category.m"; sourceTree = "<group>"; };
+		A679708D20EE00A40016087F /* DQClipImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQClipImageController.h; sourceTree = "<group>"; };
+		A679708E20EE00A40016087F /* DQClipImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQClipImageController.m; sourceTree = "<group>"; };
+		A679709020EE00D80016087F /* CXCliper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXCliper.h; sourceTree = "<group>"; };
+		A679709120EE00D80016087F /* CXCliper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXCliper.m; sourceTree = "<group>"; };
+		A679709320EE01610016087F /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		A679709420EE01620016087F /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		A679709720EE04D30016087F /* CVPixelBufferUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVPixelBufferUtils.h; sourceTree = "<group>"; };
+		A679709820EE04D30016087F /* CVPixelBufferUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVPixelBufferUtils.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A679705F20EDFC7A0016087F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A679708120EDFE600016087F /* CoreMotion.framework in Frameworks */,
+				A679707F20EDFE520016087F /* Vision.framework in Frameworks */,
+				A679707D20EDFE4C0016087F /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A679705920EDFC7A0016087F = {
+			isa = PBXGroup;
+			children = (
+				A679706420EDFC7A0016087F /* CreatePDF */,
+				A679706320EDFC7A0016087F /* Products */,
+				A679707B20EDFE4C0016087F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A679706320EDFC7A0016087F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A679706220EDFC7A0016087F /* CreatePDF.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A679706420EDFC7A0016087F /* CreatePDF */ = {
+			isa = PBXGroup;
+			children = (
+				A679708A20EE00730016087F /* Classes */,
+				A679706B20EDFC7A0016087F /* Main.storyboard */,
+				A679706E20EDFC850016087F /* Assets.xcassets */,
+				A679707020EDFC850016087F /* LaunchScreen.storyboard */,
+				A679707320EDFC860016087F /* Info.plist */,
+				A679707420EDFC860016087F /* main.m */,
+				A679708520EDFF8A0016087F /* Define.h */,
+			);
+			path = CreatePDF;
+			sourceTree = "<group>";
+		};
+		A679707B20EDFE4C0016087F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A679708020EDFE600016087F /* CoreMotion.framework */,
+				A679707E20EDFE520016087F /* Vision.framework */,
+				A679707C20EDFE4C0016087F /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A679708620EDFFB50016087F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A679709320EE01610016087F /* UIImage+Color.h */,
+				A679709420EE01620016087F /* UIImage+Color.m */,
+				A679708720EDFFCD0016087F /* UIView+Category.h */,
+				A679708820EDFFCD0016087F /* UIView+Category.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A679708A20EE00730016087F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A679709620EE04C60016087F /* Utils */,
+				A679708C20EE008F0016087F /* Views */,
+				A679708B20EE00840016087F /* Controllers */,
+				A679708620EDFFB50016087F /* Category */,
+				A679706520EDFC7A0016087F /* AppDelegate.h */,
+				A679706620EDFC7A0016087F /* AppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A679708B20EE00840016087F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A679708D20EE00A40016087F /* DQClipImageController.h */,
+				A679708E20EE00A40016087F /* DQClipImageController.m */,
+				A679706820EDFC7A0016087F /* ScanDocController.h */,
+				A679706920EDFC7A0016087F /* ScanDocController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A679708C20EE008F0016087F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A679709020EE00D80016087F /* CXCliper.h */,
+				A679709120EE00D80016087F /* CXCliper.m */,
+				A679708220EDFEF40016087F /* AVCamPreviewView.h */,
+				A679708320EDFEFE0016087F /* AVCamPreviewView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A679709620EE04C60016087F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A679709720EE04D30016087F /* CVPixelBufferUtils.h */,
+				A679709820EE04D30016087F /* CVPixelBufferUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A679706120EDFC7A0016087F /* CreatePDF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A679707820EDFC860016087F /* Build configuration list for PBXNativeTarget "CreatePDF" */;
+			buildPhases = (
+				A679705E20EDFC7A0016087F /* Sources */,
+				A679705F20EDFC7A0016087F /* Frameworks */,
+				A679706020EDFC7A0016087F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CreatePDF;
+			productName = CreatePDF;
+			productReference = A679706220EDFC7A0016087F /* CreatePDF.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A679705A20EDFC7A0016087F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Heidi;
+				TargetAttributes = {
+					A679706120EDFC7A0016087F = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = A679705D20EDFC7A0016087F /* Build configuration list for PBXProject "CreatePDF" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A679705920EDFC7A0016087F;
+			productRefGroup = A679706320EDFC7A0016087F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A679706120EDFC7A0016087F /* CreatePDF */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A679706020EDFC7A0016087F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A679707220EDFC850016087F /* LaunchScreen.storyboard in Resources */,
+				A679706F20EDFC850016087F /* Assets.xcassets in Resources */,
+				A679706D20EDFC7A0016087F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A679705E20EDFC7A0016087F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A679708F20EE00A40016087F /* DQClipImageController.m in Sources */,
+				A679709920EE04D30016087F /* CVPixelBufferUtils.m in Sources */,
+				A679706A20EDFC7A0016087F /* ScanDocController.m in Sources */,
+				A679709220EE00D80016087F /* CXCliper.m in Sources */,
+				A679707520EDFC860016087F /* main.m in Sources */,
+				A679708420EDFEFE0016087F /* AVCamPreviewView.m in Sources */,
+				A679709520EE01620016087F /* UIImage+Color.m in Sources */,
+				A679708920EDFFCE0016087F /* UIView+Category.m in Sources */,
+				A679706720EDFC7A0016087F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A679706B20EDFC7A0016087F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A679706C20EDFC7A0016087F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A679707020EDFC850016087F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A679707120EDFC850016087F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A679707620EDFC860016087F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A679707720EDFC860016087F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A679707920EDFC860016087F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92XN22H22Q;
+				INFOPLIST_FILE = CreatePDF/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = machinsight.CreatePDF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A679707A20EDFC860016087F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 92XN22H22Q;
+				INFOPLIST_FILE = CreatePDF/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = machinsight.CreatePDF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A679705D20EDFC7A0016087F /* Build configuration list for PBXProject "CreatePDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A679707620EDFC860016087F /* Debug */,
+				A679707720EDFC860016087F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A679707820EDFC860016087F /* Build configuration list for PBXNativeTarget "CreatePDF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A679707920EDFC860016087F /* Debug */,
+				A679707A20EDFC860016087F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A679705A20EDFC7A0016087F /* Project object */;
+}
