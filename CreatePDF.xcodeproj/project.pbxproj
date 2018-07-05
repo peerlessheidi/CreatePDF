@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		325E67AB24FB2BB48CF0B76E /* libPods-CreatePDF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 993F989BC82B0E253593DE75 /* libPods-CreatePDF.a */; };
 		A679706720EDFC7A0016087F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A679706620EDFC7A0016087F /* AppDelegate.m */; };
 		A679706A20EDFC7A0016087F /* ScanDocController.m in Sources */ = {isa = PBXBuildFile; fileRef = A679706920EDFC7A0016087F /* ScanDocController.m */; };
 		A679706D20EDFC7A0016087F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A679706B20EDFC7A0016087F /* Main.storyboard */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B4DA957C301DFCDD471E89E /* Pods-CreatePDF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreatePDF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CreatePDF/Pods-CreatePDF.debug.xcconfig"; sourceTree = "<group>"; };
+		6C61A82F66990465276E3915 /* Pods-CreatePDF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CreatePDF.release.xcconfig"; path = "Pods/Target Support Files/Pods-CreatePDF/Pods-CreatePDF.release.xcconfig"; sourceTree = "<group>"; };
+		993F989BC82B0E253593DE75 /* libPods-CreatePDF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CreatePDF.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A679706220EDFC7A0016087F /* CreatePDF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreatePDF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A679706520EDFC7A0016087F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A679706620EDFC7A0016087F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,18 +65,29 @@
 				A679708120EDFE600016087F /* CoreMotion.framework in Frameworks */,
 				A679707F20EDFE520016087F /* Vision.framework in Frameworks */,
 				A679707D20EDFE4C0016087F /* AVFoundation.framework in Frameworks */,
+				325E67AB24FB2BB48CF0B76E /* libPods-CreatePDF.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6224C2A3459D0D46C75EB462 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B4DA957C301DFCDD471E89E /* Pods-CreatePDF.debug.xcconfig */,
+				6C61A82F66990465276E3915 /* Pods-CreatePDF.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A679705920EDFC7A0016087F = {
 			isa = PBXGroup;
 			children = (
 				A679706420EDFC7A0016087F /* CreatePDF */,
 				A679706320EDFC7A0016087F /* Products */,
 				A679707B20EDFE4C0016087F /* Frameworks */,
+				6224C2A3459D0D46C75EB462 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +119,7 @@
 				A679708020EDFE600016087F /* CoreMotion.framework */,
 				A679707E20EDFE520016087F /* Vision.framework */,
 				A679707C20EDFE4C0016087F /* AVFoundation.framework */,
+				993F989BC82B0E253593DE75 /* libPods-CreatePDF.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,6 +186,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A679707820EDFC860016087F /* Build configuration list for PBXNativeTarget "CreatePDF" */;
 			buildPhases = (
+				6F71EB72C960C3CC6A78D6AA /* [CP] Check Pods Manifest.lock */,
 				A679705E20EDFC7A0016087F /* Sources */,
 				A679705F20EDFC7A0016087F /* Frameworks */,
 				A679706020EDFC7A0016087F /* Resources */,
@@ -227,6 +244,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F71EB72C960C3CC6A78D6AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CreatePDF-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A679705E20EDFC7A0016087F /* Sources */ = {
@@ -379,6 +417,7 @@
 		};
 		A679707920EDFC860016087F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B4DA957C301DFCDD471E89E /* Pods-CreatePDF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +435,7 @@
 		};
 		A679707A20EDFC860016087F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C61A82F66990465276E3915 /* Pods-CreatePDF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
