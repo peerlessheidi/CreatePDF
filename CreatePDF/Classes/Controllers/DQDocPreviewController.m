@@ -117,7 +117,13 @@ UIScrollViewDelegate>
         if (self.uploadAction) {
             self.uploadAction(path);
             
-            NSLog(@"本地已有的PDF地址：%@", path);
+            NSArray *controllers = self.navigationController.viewControllers;
+            NSInteger index = [controllers indexOfObject:self];
+            NSInteger popIndex = 0;
+            if (index >= 2) {
+                popIndex = index - 2;
+            }
+            [self.navigationController popToViewController:controllers[popIndex] animated:YES];
         }
         return;
     }
