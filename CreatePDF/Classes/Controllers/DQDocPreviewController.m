@@ -125,7 +125,6 @@ UIScrollViewDelegate>
             }
             [self.navigationController popToViewController:controllers[popIndex] animated:YES];
         }
-        return;
     }
 }
 

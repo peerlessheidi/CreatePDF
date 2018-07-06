@@ -504,6 +504,8 @@
 // 取消按钮
 - (void)onCancelClick {
     [self stopCapture];
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 // 拍照
@@ -556,6 +558,7 @@
     
     ctl.shouldUpload = !noUpload;
     ctl.uploadAction = ^(id result) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (self.finished) {
             self.finished(result);
         }
